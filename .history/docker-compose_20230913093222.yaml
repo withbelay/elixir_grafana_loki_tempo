@@ -2,9 +2,13 @@ version: "3.3"
 
 services:
   app:
-    build:
-      context: ./app
-      dockerfile: Dockerfile
+    image: bitwalker/alpine-elixir-phoenix:latest
+    command: >
+      /bin/sh -c 'cd /app &&
+      mix local.hex --force &&
+      mix local.rebar --force &&
+      mix deps.get &&
+      exec elixir --sname app --cookie super_secret -S mix phx.server'
     ports:
       - "4000:4000"
       - "4001:4001"

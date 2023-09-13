@@ -47,7 +47,7 @@ defmodule FF.MixProject do
       # {:opentelemetry_ecto, "~> 1.0.0-rc.3"},
       # {:opentelemetry_plug, github: "opentelemetry-beam/opentelemetry_plug", override: true},
       {:opentelemetry, "~> 1.0.0-rc.3"},
-      {:prometheus_ex, git: "https://github.com/lanodan/prometheus.ex", branch: "fix/elixir-1.14", override: true},
+      {:prometheus_ex, "~> 3.0.5"},
       {:prometheus_plugs, "~> 1.1.5"}
     ]
   end
